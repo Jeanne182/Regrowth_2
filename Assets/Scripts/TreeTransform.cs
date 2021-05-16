@@ -4,11 +4,16 @@ using System;
 public class TreeTransform : MonoBehaviour
 {
     public Animator animator;
-    public GameObject parent;
+    public Transformation parent;
 
     private void OnTriggerEnter2D(Collider2D collision){
-      //if(parent.wilt){
-          //animator.SetTrigger("wilt");
-      //}
+      if(collision.transform.CompareTag("Player") && parent.wilt){
+
+          animator.SetTrigger("Bloom");
+      }
+      if(collision.transform.CompareTag("Player") && !parent.wilt){
+
+          animator.SetTrigger("Wilt");
+      }
     }
 }
