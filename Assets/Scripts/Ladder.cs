@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Ladder : MonoBehaviour
 {
 
-    private  bool isInRange;
+    private bool isInRange;
     private PlayerMovement playerMovement;
     public BoxCollider2D colliderLadder;
     public Text interactUI;
