@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class WeekSpot : MonoBehaviour
+public class WeakSpot : MonoBehaviour
 {
     public GameObject objectToDestroy;
     public AudioClip killSound;
@@ -10,6 +10,7 @@ public class WeekSpot : MonoBehaviour
         {
           AudioManager.instance.PlayClipAt(killSound, transform.position);
           Destroy(objectToDestroy);
+          RandomManager.instance.lifeMustPop = true; 
         }
     }
 }
